@@ -5,9 +5,10 @@ public class JLeungLib {
     {
         String out = "Hello";
         return (input + out + "There");
+        //delete later
 
     }
-    //return true if same backwards and forwards
+    //returns true if same backwards and forwards
     public static boolean isPalindrome(String input){
         String backwards = "";
         int i = input.length();
