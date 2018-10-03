@@ -5,15 +5,9 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         System.out.println(JLeungLib.test("hi"));
-    }
-
-    public static boolean isPalindrome(String input){
-        String backwards = "";
-        int i = input.length();
-        while (i > 0)
-        {
-            backwards = backwards + input.substring(i-1, i);
-        }
-        return (backwards.equals(input));
+        System.out.println(JLeungLib.isPalindrome("racecar"));
+        System.out.println(JLeungLib.isPalindrome("cat"));
+        System.out.println(JLeungLib.isPalindrome("askdljasl"));
+        System.out.println(JLeungLib.isPalindrome("reviver"));
     }
 }
