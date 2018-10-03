@@ -18,5 +18,16 @@ public class JLeungLib {
         }
         return (backwards.equals(input));
     }
+
+    public static int multiplicationTable(int base, int range){
+        if (range > 0 || range < 0)
+        {
+            if (range > 0)
+        }
+        else //if range is 0
+        {
+            return base + "*" + range + " = 0"
+        }
+    }
 }
 
