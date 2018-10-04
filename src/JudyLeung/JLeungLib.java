@@ -3,8 +3,7 @@ package JudyLeung;
 public class JLeungLib {
     public static String test(String input)
     {
-        String out = "Hello";
-        return (input + out + "There");
+        return input + "There";
         //delete later
 
     }
@@ -19,15 +18,35 @@ public class JLeungLib {
         return (backwards.equals(input));
     }
 
-    public static int multiplicationTable(int base, int range){
-        if (range > 0 || range < 0)
+
+    public static String multiplicationTable(int base, int range){
+        if (range > 0 || range < 0) //accounts for both a negative and positive range
         {
+            int i = 0;
             if (range > 0)
+            {
+                while (i <= range)
+                {
+                    System.out.println(base + " * " + i + " = " + ( base * i ));
+                    i++;
+                }
+
+
+            }
+            else //if range is negative
+            {
+                while (i >= range)
+                {
+                    System.out.println(base + " * " + i + " = " + (base * i));
+                    i--;
+                }
+            }
         }
         else //if range is 0
         {
-            return base + "*" + range + " = 0"
+            System.out.println(base + " * " + range + " = 0");
         }
+        return null; //the code stops here and all the multiplication tables end with "null"
     }
 }
 
