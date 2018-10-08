@@ -1,21 +1,16 @@
 package JudyLeung;
 // create methods here
 public class JLeungLib {
-    public static String test(String input)
-    {
-        return input + "There";
-        //delete later
 
-    }
     //returns true if same backwards and forwards
     public static boolean isPalindrome(String input){
         String backwards = "";
         int i = input.length();
-        while (i > 0) {
+        while (i > 0) { // creates a backwards string of input
             backwards = backwards + input.substring(i - 1, i);
             i--;
         }
-        return (backwards.equals(input));
+        return (backwards.equals(input)); //returns true if backwards string is same as input
     }
 
 
@@ -23,11 +18,11 @@ public class JLeungLib {
    public static String cutOut(String mainStr, String subStr){
         if (mainStr.contains(subStr))
         {
-            String front = mainStr.substring(0, (mainStr.indexOf(subStr)));
-            String back = mainStr.substring((mainStr.indexOf(subStr)+subStr.length()));
+            String front = mainStr.substring(0, (mainStr.indexOf(subStr))); //from beginning of mainStr to before subStr
+            String back = mainStr.substring((mainStr.indexOf(subStr)+subStr.length())); //the string in mainStr after the subStr
             return front + back;
         }
-        else
+        else // if subStr isn't in the mainStr it just returns mainStr
         {
           return mainStr;
         }
@@ -66,6 +61,7 @@ public class JLeungLib {
     }
 
 
+    // adds all numbers in order from 0 to the integer (ie. input 3 = 0 + 1 + 2 + 3 = 5)
     public static int sumUpTo(int integer) {
         int out = 0;
         if (integer >= 0)
@@ -83,6 +79,14 @@ public class JLeungLib {
             }
         }
         return out;
+    }
+
+  // input string in the format mm/dd/yyyy
+    public static String dateStr(String input ){
+        String mm = input.substring(0,2);
+        String dd = input.substring(3,5);
+        String yyyy = input.substring(6,10);
+        return dd + " - " + mm + " - " + yyyy;
     }
 }
 
