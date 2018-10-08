@@ -64,5 +64,25 @@ public class JLeungLib {
         }
         return null; //the code stops here and all the multiplication tables end with "null"
     }
+
+
+    public static int sumUpTo(int integer) {
+        int out = 0;
+        if (integer >= 0)
+        {
+            for (int count = 0 ; count <= integer ; count++ )
+            {
+                out = out + count;
+            }
+        }
+        else // if integer is negative
+        {
+            for (int index = integer ; index <= 0 ; index++)
+            {
+                out = out + index;
+            }
+        }
+        return out;
+    }
 }
 
