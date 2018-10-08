@@ -26,6 +26,8 @@ public class Main {
         System.out.println(JLeungLib.sumUpTo(-5)); //integer negative
         System.out.println(JLeungLib.sumUpTo(0)); // integer 0
 
+
+        // input mm/dd/yyyy return dd - mm - yyyy
         System.out.println(JLeungLib.dateStr("01/08/1999"));
 
     }
