@@ -19,6 +19,22 @@ public class JLeungLib {
     }
 
 
+    // returns mainStr with the first instance of subStr deleted from mainStr
+   public static String cutOut(String mainStr, String subStr){
+        if (mainStr.contains(subStr))
+        {
+            String front = mainStr.substring(0, (mainStr.indexOf(subStr)));
+            String back = mainStr.substring((mainStr.indexOf(subStr)+subStr.length()));
+            return front + back;
+        }
+        else
+        {
+          return mainStr;
+        }
+   }
+
+
+    // returns a multiplication table for a base number
     public static String multiplicationTable(int base, int range){
         if (range > 0 || range < 0) //accounts for both a negative and positive range
         {
