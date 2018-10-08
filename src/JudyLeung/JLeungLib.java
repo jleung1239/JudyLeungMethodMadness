@@ -2,7 +2,7 @@ package JudyLeung;
 // create methods here
 public class JLeungLib {
 
-    //returns true if same backwards and forwards
+    //returns true if input is the same backwards and forwards
     public static boolean isPalindrome(String input){
         String backwards = "";
         int i = input.length();
@@ -81,7 +81,7 @@ public class JLeungLib {
         return out;
     }
 
-  // input string in the format mm/dd/yyyy
+  // input string in the format mm/dd/yyyy, returns dd - mm - yyyy
     public static String dateStr(String input ){
         String mm = input.substring(0,2);
         String dd = input.substring(3,5);
